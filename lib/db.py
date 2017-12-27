@@ -10,7 +10,7 @@ class DB:
 	def __init__(self):
 		try:
 			host=os.environ['DBHOST']
-			port=os.environ['DBPORT']
+			port=int(os.environ['DBPORT'])
 			user=os.environ['DBUSER']
 			pswd=os.environ['DBPSWD']
 			db=os.environ['DB']

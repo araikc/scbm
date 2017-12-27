@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	
+	<div class="slider">
+		<div class="container">
+			<div id="about-slider">
+				<div id="carousel-slider" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+				  	<ol class="carousel-indicators visible-xs">
+					    <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-slider" data-slide-to="1"></li>
+					    <li data-target="#carousel-slider" data-slide-to="2"></li>
+				  	</ol>
+
+					<div class="carousel-inner">
+                       <div class="item active" title="Click Buzz Media">
+                            <img src="{{ url_for('static', filename='images/we.jpg') }}" class="img-responsive" alt="Click Buzz Media"> 
+                       </div>                   
+						<div class="item" title="Publisher">
+							<img src="{{ url_for('static', filename='images/slide1.jpg') }}" class="img-responsive" alt="Publisher"> 
+					   </div>
+					   <div class="item" title="Advertiser">
+							<img src="{{ url_for('static', filename='images/publisher1.jpg') }}" class="img-responsive" alt="Advertiser"> 
+					   </div> 
+					</div>
+					
+					<a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+						<i class="fa fa-angle-left"></i> 
+					</a>
+					
+					<a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
+						<i class="fa fa-angle-right"></i> 
+					</a>
+				</div> <!--/#carousel-slider-->
+			</div><!--/#about-slider-->
+		</div>
+	</div>
+
+	 <section id="feature">
+        <div class="container">
+           <!-- <div class="center wow fadeInDown">
+                <h2>Features</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div> -->
+            <div class="get-signup center wow fadeInUp">
+                <h2>Ready to get started?</h2>
+                <p class="lead">Hit the Sign Up button and register as an Advertiser or Publisher today!
+                <div class="s-request">
+                    <h3><a href="http://www.clickbuzzmedia.com/signup">Sign up</a></h3>
+                </div>
+            </div><!--/.get-started-->
+
+            <!-- <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-laptop"></i>
+                            <h4 style="font-weight:bold;">Publishers</h4>
+                            <h6>Highest ratio for impressions. All content allowed. Best revenue CPM program.</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-compass"></i>
+                            <h4 style="font-weight:bold;">ClickBuzz Media</h4>
+                            <h6>The best popunder network with the best staff.</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <h4  style="font-weight:bold;">Advertisers</h4>
+                            <h6>Fully customizable campaigns. Fast and quality traffic.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+	
+	
+{% endblock %}

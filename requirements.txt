@@ -1,0 +1,9 @@
+gunicorn
+flask_wtf
+wtforms
+flask_mail
+flask
+MySQL-python
+passlib
+bcrypt
+flask_login

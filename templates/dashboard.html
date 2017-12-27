@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 497 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>ClickBuzzMedia</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+<style>
+    label, input {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 120px;
+}
+
+label {
+    color: #2D2D2D;
+    font-size: 15px;
+}
+
+form, input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+form {
+    width: 330px;
+}
+</style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <a href="{{ url_for('dashboardLogout') }}" type="button" class="btn btn-danger pull-right" title="Add new publisher!">Logout</a>
+            <h2 >Publishers({{ count }})</h2>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <button id="newPub" type="button" class="btn btn-success" title="Add new publisher!">New</button>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                    {% for col in fields %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                    <th>edit</th>
+                    <th>delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for row in publishers|reverse %}
+                    <tr id="{{ row[2] }}" class="dataRow">
+                        {% for d in row %}
+                            {% if d == None or  d == '' %}
+                                <td> -- </td>
+                            {% else %}
+                                <td>{{ d }}</td>
+                            {% endif %}
+                        {% endfor %}
+                        <td><button class="btn btn-small btn-danger editItem">Edit</button></td>
+                        <td><button class="btn btn-small btn-danger delItem">X</button></td>
+                    </tr>
+                {% endfor %}               
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<!-- Trigger the modal with a button -->
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">HTML code</h4>
+      </div>
+      <div class="modal-body">
+        <p id="modal_text"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal1 -->
+<div id="editModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 id="headerText" class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+
+
+        <form class="form-inline">
+          <label for="name">Name:</label> <input type="text" id="name" name="name" value="" class="form-control">
+          <label for="subid">SubId: </label><input type="text" id="subid" name="subid" value="" class="form-control">
+          <label for="feedid">FeedId: </label><input type="text" id="feedid" name="feedid" value="" class="form-control">
+          <label for="feedauth">FeedAuth: </label><input type="text" id="feedauth" name="feedauth" value="" class="form-control">
+          <label for="delay">Delay(s): </label><input type="text" id="delay" name="delay" value="" class="form-control">
+          <label for="max">Max: </label><input type="text" id="max" name="max" value="" class="form-control">
+          <label for="period">Period(h): </label><input type="text" id="period" name="period" value="" class="form-control">
+          <label for="def_url">Def URL: </label><input type="text" id="def_url" name="def_url" value="" class="form-control">
+          <input type="text" id="id" name="id" value="" class="form-control" style="display:none">
+          <!-- rest of form -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="saveBtn" type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+
+</html>

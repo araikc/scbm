@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	
+	<section id="services" class="service-item topSide">
+	   <div class="container">
+            <div class="center wow fadeInDown">
+                <h2><span>Publishers</span></h2>
+                <p class="lead">We provide global ad inventory coverage with immense fill rates.</p>
+                <div class="s-request" style="bottom: 10px;">
+                        <h3><a href="http://www.clickbuzzmedia.com/signup">Sign up</a></h3>
+                </div>
+            </div>
+
+
+
+            <div class="row publishers">
+
+            <div class="why_choose col-sm-8 col-md-4">
+                <div class="why_choose">
+                    <h4 style="color:#ffffff">Why Choose ClickBuzz Media?</h4>
+                    <ul>
+                    <li>Highly experienced team with years of monetization strategies</li>
+                    <li>We care about user experience. Our team tests and audits campaigns throughout the day to ensure compliance</li>
+                    <li>Quick approval process. Turnaround time for site approval within 24 hours</li>
+                    <li>Excellent CPMs and fill</li>
+                    <li>Realtime stats</li>
+                    </ul>
+                </div>
+            </div>
+
+                <div class="col-sm-8 col-md-3">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="{{ url_for('static', filename='images/services/services1.png') }}">
+                        </div>
+                        <div class="media-body">
+                            <h4 style="font-weight:bold;">Rates and coverage</h4>
+                        </div>
+                        <p style="font-size:12px">We offer industry leading rates and the best international traffic coverage. No traffic will be left out with us, you will get paid for all of your visitors.</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-8 col-md-3">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="{{ url_for('static', filename='images/services/services2.png') }}">
+                        </div>
+                        <div class="media-body">
+                            <h4 style="font-weight:bold;">Full control</h4>
+                        </div>
+                        <p style="font-size:12px">With our powerful publisher's panel, we made possible that you could easily analyze your profits while keeping the interface simple and clean.</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-8 col-md-3">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="{{ url_for('static', filename='images/services/services3.png') }}">
+                        </div>
+                        <div class="media-body">
+                            <h4 style="font-weight:bold;">Amazing support</h4>
+                        </div>
+                        <p style="font-size:12px">We are here to help. With our full time dedicated account managers and our 24/7 support, you can easily get in touch with us.</p>
+                    </div>
+                </div>  
+
+               <div class="col-sm-6 col-md-3">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left">
+                            <img class="img-responsive" src="{{ url_for('static', filename='images/services/services4.png') }}">
+                        </div>
+                        <div class="media-body">
+                            <h4 style="font-weight:bold;">Daily payments</h4>
+                        </div>
+                        <p style="font-size:12px">Fast and Flexible Payments. We understand cash flow is key, hence we have a hassle free payment structure to ensure you get pay fast!</p>
+                    </div>
+                </div>
+
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+	
+
+
+    
+{% endblock %}

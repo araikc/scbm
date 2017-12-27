@@ -1,0 +1,65 @@
+.icoLogo img {
+	height:100px;
+	width:150px;
+}
+
+#topLogo .logoTitle , #topLogo .logoSubtitle {
+	display:none;
+}
+
+
+#topSubNav a {
+	background-color:black;
+	-webkit-transition: all ease 800ms;
+	-moz-transition: all ease 800ms;
+	-o-transition: all ease 800ms;
+	transition: all ease 800;
+}
+
+#topSubNav a:hover {
+	background-color:#d00404;
+}
+
+
+#promoContent h2 {
+	color:#22293b;
+}
+
+#mainNav{
+	margin-top: 0px;
+}
+
+#topSubNav a {
+	float:none;
+	margin-bottom:10px;
+}
+
+#topSubNav{
+	padding-top: 35px;
+}
+
+#bottomFooter {
+    border-top: 1px solid #e3e3e3;
+    height: 110px;
+}
+
+#mainNav li:nth-child(3) {
+	display:none;
+}
+
+#mainNav li:nth-child(4) {
+	display:none;
+}
+
+#footerNav li:nth-child(3) {
+	display:none;
+}
+
+#footerNav li:nth-child(4) {
+	display:none;
+}
+
+ body {
+ 	background: black;
+ }
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+        <url> 
+            <loc>http://clickbuzzmedia.com</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>
+        <url> 
+            <loc>http://clickbuzzmedia.com/home</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>
+        <url> 
+            <loc>http://clickbuzzmedia.com/publishers</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>
+        <url> 
+            <loc>http://clickbuzzmedia.com/advertisers</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>
+        <url> 
+            <loc>http://clickbuzzmedia.com/contact</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>
+        <url> 
+            <loc>http://clickbuzzmedia.com/signup</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>
+        <url> 
+            <loc>http://clickbuzzmedia.com/terms</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>                                        
+        <url> 
+            <loc>http://clickbuzzmedia.com/policy</loc> 
+            <lastmod>2017-05-22T00:41:37Z</lastmod> 
+        </url>          
+</urlset>

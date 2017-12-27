@@ -2,6 +2,7 @@
 from passlib.hash import bcrypt
 import MySQLdb
 import appconfig
+import os
 
 class DB:
 	connection = None

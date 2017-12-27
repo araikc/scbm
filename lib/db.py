@@ -8,8 +8,13 @@ class DB:
 
 	def __init__(self):
 		try:
+			host=os.environ['DBHOST']
+			port=os.environ['DBPORT']
+			user=os.environ['DBUSER']
+			pswd=os.environ['DBPSWD']
+			db=os.environ['DB']
 			if self.connection == None:
-				self.connection = MySQLdb.connect(host=appconfig.MYSQLDB.HOST, user=appconfig.MYSQLDB.USER, passwd=appconfig.MYSQLDB.PASSWORD, db=appconfig.MYSQLDB.DB, port=appconfig.MYSQLDB.PORT)
+				self.connection = MySQLdb.connect(host=host, user=user, passwd=pswd, db=db, port=port)
 		except Exception as e:
 			print "MySQLError %s" % (e.message)
 

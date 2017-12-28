@@ -14,13 +14,14 @@ import os
 application = Flask(__name__) 
  
 application.config.from_object('appconfig.DevelopmentConfig')
+app.config.update(
+    MAIL_PASSWORD=os.environ['MAIL_PASS']
+)
 
 mail = Mail()
 
 mail.init_app(application)
-app.config.update(
-    MAIL_PASSWORD=os.environ['MAIL_PASS']
-)
+
 
 # application.config['MYSQL_DATABASE_USER'] = appconfig.MYSQLDB.USER
 # application.config['MYSQL_DATABASE_PASSWORD'] = appconfig.MYSQLDB.PASSWORD

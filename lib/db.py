@@ -28,7 +28,12 @@ class DB:
 				cursor.close() 
 				self.connection.commit()
 			except Exception as e:
-				args[0].connection = MySQLdb.connect(host=appconfig.MYSQLDB.HOST, user=appconfig.MYSQLDB.USER, passwd=appconfig.MYSQLDB.PASSWORD, db=appconfig.MYSQLDB.DB, port=appconfig.MYSQLDB.PORT)
+				host=os.environ['DBHOST']
+				port=int(os.environ['DBPORT'])
+				user=os.environ['DBUSER']
+				pswd=os.environ['DBPSWD']
+				db=os.environ['DB']
+				args[0].connection = MySQLdb.connect(host=host, user=user, passwd=pswd, db=db, port=port)
 			return func(*args, **kwargs)
 		return wrap_func
 

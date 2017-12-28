@@ -8,6 +8,7 @@ from flask_login import LoginManager, login_user, logout_user, login_required, c
 import appconfig
 from lib import db
 from lib import user
+import os
 
 ### APPLICATIO  SETUP ###
 application = Flask(__name__) 

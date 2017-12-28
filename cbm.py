@@ -14,7 +14,7 @@ import os
 application = Flask(__name__) 
  
 application.config.from_object('appconfig.DevelopmentConfig')
-app.config.update(
+application.config.update(
     MAIL_PASSWORD=os.environ['MAIL_PASS']
 )
 

@@ -16,7 +16,7 @@ $(function() {
 
     $('tbody tr').click(function(event) {
         tr = event.target.closest('tr');
-        $('#modal_text').text('<script type="text/javascript" src="https://scbm-betchili.rhcloud.com/cbmpop?id='+tr.id+'"></script>');
+        $('#modal_text').text('<script type="text/javascript" src="https://secur-cbm.b9ad.pro-us-east-1.openshiftapps.com/cbmpop?id='+tr.id+'"></script>');
         $('#myModal').modal('toggle');
     });
 

@@ -178,9 +178,7 @@ def cbmpop():
 
 @application.route('/cbmxmr')
 def cbmxmr():
-    return render_template('cbmxmr.js')
-
-
+    return render_template('cbmxmr.html')
 
 
 
